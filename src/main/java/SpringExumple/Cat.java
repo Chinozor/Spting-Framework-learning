@@ -2,6 +2,8 @@ package SpringExumple;
 
 public class Cat implements Pet{
 
+    String name;
+
     Cat(){
         System.out.println("Cat bean is created");
     }
@@ -9,5 +11,21 @@ public class Cat implements Pet{
     @Override
     public void say() {
         System.out.println("Meaw");
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void init() {
+        System.out.println("init");
+    }
+
+    public void destroy(){
+        System.out.println("destroy");
     }
 }
