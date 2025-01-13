@@ -10,13 +10,8 @@
     <context:property-placeholder location="classpath:myApp.properties"/>
 
 
-    <bean id = "myPet"
-          class="SpringExumple.Cat"
-          init-method="init"
-          destroy-method="destroy"
-    >
-
-    </bean>
+    <context:component-scan base-package="SpringExumple"/>
+    <context:property-placeholder location="classpath:myApp.properties"/>
 
 
 </beans>
