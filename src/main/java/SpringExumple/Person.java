@@ -5,23 +5,23 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
-@Component ("personBean")
+//@Component ("personBean")
 public class Person {
 
-    @Autowired
-    @Qualifier("catBean")
+    //@Autowired
+    //@Qualifier("catBean")
     Pet pet;
 
-    //@Value("${person.surname}")
+    @Value("${person.surname}")
     private String surname;
-    //@Value("${person.age}")
+    @Value("${person.age}")
     private int age;
 
-    /*@Autowired
+    //@Autowired
     Person(Pet pet){
         System.out.println("Person bean is created");
         this.pet = pet;
-    }*/
+    }
 
     @Override
     public String toString() {
@@ -32,9 +32,9 @@ public class Person {
                 '}';
     }
 
-    Person(){
+    /*Person(){
         System.out.println("Person bean is created");
-    }
+    }*/
 
 //    @Autowired
     public void setPet(Pet pet){

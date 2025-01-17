@@ -1,10 +1,20 @@
 package SpringExumple;
 
 
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.*;
 
 @Configuration
-@ComponentScan("SpringExumple")
+@PropertySource("classpath:myApp.properties")
+//@ComponentScan("SpringExumple")
 public class MyConfig {
+
+    @Bean
+    @Scope ("singleton")
+    public Pet catBean(){
+        return new Cat();
+    }
+
+    public Person personBean(){
+        return new Person(catBean());
+    }
 }
