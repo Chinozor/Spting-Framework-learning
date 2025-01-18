@@ -6,16 +6,27 @@ import org.springframework.stereotype.Component;
 public class SchoolLibrary extends AbstractLibrary{
 
     //@Override
-    public void getBook(Book book) {
-        System.out.println("Берем книгу из школьной библиотеки: " + book.getBookName());
+    public void getBook() {
+        System.out.println("Берем книгу из школьной библиотеки");
     }
 
-//    String returnBook(){
-//        System.out.println("Мы возвращаем книгу в школьную библиотеку");
-//        return "OK";
-//    }
+    public void returnBook(){
+        System.out.println("Мы возвращаем книгу в школьную библиотеку");
+    }
 
     public void getMagazine(){
         System.out.println("Мы берем журнал из школьной библиотеки");
+    }
+
+    public void returnMagazine(){
+        System.out.println("Мы возвращаем книгу в школьную библиотеку");
+    }
+
+    public void addBook(){
+        System.out.println("Мы добавляем книгу в школьную библиотеку");
+    }
+
+    public void addMagazine(){
+        System.out.println("Мы добавляем книгу в школьную библиотеку");
     }
 }

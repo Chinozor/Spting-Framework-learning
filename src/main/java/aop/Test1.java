@@ -7,14 +7,15 @@ public class Test1 {
         AnnotationConfigApplicationContext context =
                 new AnnotationConfigApplicationContext(MyConfig.class);
 
-        Book book = context.getBean("book", Book.class);
+        //Book book = context.getBean("book", Book.class);
         UniLibrary library = context.getBean("unilibraryBean", UniLibrary.class);
         SchoolLibrary schoolLibrary = context.getBean("schoolLibraryBean", SchoolLibrary.class);
 
-        //library.getBook();
-        schoolLibrary.getBook(book);
-        //schoolLibrary.returnBook();
-        //schoolLibrary.getMagazine();
+//        library.getBook();
+        schoolLibrary.getBook();
+//        schoolLibrary.returnBook();
+//        schoolLibrary.returnMagazine();
+        schoolLibrary.getMagazine();
 
         context.close();
 
