@@ -1,10 +1,12 @@
 package aop.Aspect;
 
 
+import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
+
 
 @Component
 @Aspect
@@ -51,9 +53,17 @@ public class LoggingAspect {
 //    }
 
 
-    @Before("aop.Aspect.MyPointcuts.allGetMethods()")
-    public void beforeGetBookAdvice(){
+    @Before("aop.Aspect.MyPointcuts.allAddMethods()")
+    public void beforeAddBookAdvice(JoinPoint joinPoint){
+
+        joinPoint.getSignature();
+
+        System.out.println("MethodSignature = " + joinPoint.getSignature());
+
+
         System.out.println("beforeGetBookAdvice: логирование попытки попытка получить книгу или журнал");
+        System.out.println("-------------------------------------------------------------------------");
+
     }
 
 
