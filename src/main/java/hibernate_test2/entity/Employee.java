@@ -37,6 +37,5 @@ public class Employee {
         this.surname = surname;
         this.department = department;
         this.salary = salary;
-        this.empDetail = empDetail;
     }
 }
